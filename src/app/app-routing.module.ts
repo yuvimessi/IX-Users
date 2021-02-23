@@ -5,7 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { CreateRoleComponent } from './create-role/create-role.component';
 import { EditRoleComponent } from './edit-role/edit-role.component';
 const routes: Routes = [
-  {path: "**", redirectTo: "/home"},
+  //{path: "**", redirectTo: "/home"},
   {path: "home", component: HomeComponent},
   {path: "user-roles", component: UserRolesComponent},
   {path:"create-role", component: CreateRoleComponent},
