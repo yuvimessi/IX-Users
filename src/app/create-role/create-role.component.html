@@ -1,8 +1,10 @@
 <br>
 
-
-
 <button class="btn btn-secondary mx-2 float-right" routerLink="/user-roles">Back</button><br><br><br>
+
+
+<h3>Create a new Role</h3><hr>
+
 
 <div class="col-md-12 text-center">
 
@@ -13,10 +15,10 @@
                 <label class="col-form-label col-md-2" for="rname">Role Name: </label>
                 <div class="col-md-5">
                     <input type="text" name="rname" id="rname" class="form-control"
-                        placeholder="Enter Role Name">
+                        placeholder="Enter Role Name" required>
                 </div>
 
-                <button type="submit" class="btn btn-success">Submit</button>
+                <button class="btn btn-success" (click)="createRole()">Submit</button>
 
 
             </div><br>

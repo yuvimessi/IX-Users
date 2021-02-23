@@ -75,8 +75,12 @@ export class UserRolesComponent implements OnInit {
       }
     }
 
+    if(roleData.active==true){
     roleData.active=false;
-
+    }
+    else{
+      roleData.active=true;
+    }
     this.user_roles.updateRole(roleData).subscribe((result:any)=>{
       this.ngOnInit();
       //this.router.navigateByUrl('/user-roles');

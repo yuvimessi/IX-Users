@@ -47,7 +47,7 @@ export class RolesService {
 
   updateRole(roleData: any){
     this.getRoles();
-    // data = data["id"];
+    
     const url = 'http://devourin-api-qa.chain-expert.com/role/updaterole'
    
     var reqHeader = new HttpHeaders({
@@ -57,6 +57,16 @@ export class RolesService {
     return this.http.put<any[]>(url, roleData, { headers: reqHeader });
   }
 
+
+  createRole(data: any){
+    const url = 'http://devourin-api-qa.chain-expert.com/role/createrole'
+   
+    var reqHeader = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': this.token
+    });
+    return this.http.post<any[]>(url, data, { headers: reqHeader });
+  }
 
 
 }
