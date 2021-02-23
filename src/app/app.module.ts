@@ -13,9 +13,6 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 // import { Ng2OrderModule } from 'ng2-order-pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AllRolesComponent } from './all-roles/all-roles.component';
-import { ActiveRolesComponent } from './active-roles/active-roles.component';
-import { InactiveRolesComponent } from './inactive-roles/inactive-roles.component';
 import { CreateRoleComponent } from './create-role/create-role.component';
 import { EditRoleComponent } from './edit-role/edit-role.component';
 
@@ -25,9 +22,6 @@ import { EditRoleComponent } from './edit-role/edit-role.component';
     UserRolesComponent,
     HomeComponent,
     RoleSearchPipe,
-    AllRolesComponent,
-    ActiveRolesComponent,
-    InactiveRolesComponent,
     CreateRoleComponent,
     EditRoleComponent
   ],
