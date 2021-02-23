@@ -1,0 +1,55 @@
+<br><br>
+
+
+
+<button class="btn btn-primary mx-2 float-right" routerLink="/create-role">Create Role</button><br><br>
+<form action="#"><input type="text" class="form-control search-input form-rounded" id="text-search" name="text-search"
+    [(ngModel)]="searchValue" placeholder="Search for user roles"></form>
+
+
+
+
+<br>
+<div id="tabs" class="float-right">
+  <a><button type="button" class="btn btn-secondary mx-2" (click)="loadAll()">All</button></a>
+  <a><button type="button" class="btn btn-success mx-2" (click)="loadData()">Active</button></a>
+  <a><button type="button" class="btn btn-warning mx-2" (click)="loadInactive()">Inactive</button></a>
+</div>
+<br> <br>
+
+<div class="container">
+
+  <table class="col-md-12 text-center table table-striped">
+
+    <thead>
+      <tr style="font-size: medium;">
+        <th>Name</th>
+        <th>Edit</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <!-- <tr *ngFor="let user of data"> -->
+      <tr *ngFor="let user of data | roleSearch: searchValue | paginate: { id: 'listing_pagination',
+      itemsPerPage: 10,
+      currentPage: page,
+      totalItems: totalRecords }">
+
+        <td>{{user.name}}</td>
+        <td><a [routerLink]="['/edit-role', user.name, user.id]"><img width="25px" style="margin-bottom:3px; margin-right:5px" alt="Edit Role"
+            src="assets/images/edit.png" /></a>
+        </td>
+        <td><button type="button" class="btn btn-danger" (click)="deactivateRole(user.id)">Activate/Deactivate</button></td>
+
+      </tr>
+    </tbody>
+  </table>
+  <br>
+
+  <div class="text-center">
+    <!-- <pagination-controls id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"> -->
+    <pagination-controls id="listing_pagination" (pageChange)="page = $event">
+    </pagination-controls>
+  </div>
+</div>
