@@ -10,7 +10,7 @@ export class RolesService {
 
   constructor(private http: HttpClient) { }
 
-  token = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNCwicm9sZV9pZCI6MzUsImlhdCI6MTYxNDA2OTEyNywiZXhwIjoxNjE0MDc5MTI3fQ.CWHEfkQbcC7C2Y08IaBZk_1HcwSusd48MxNV01fJU08'
+  token = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNCwicm9sZV9pZCI6MzUsImlhdCI6MTYxNDI0NzQxMiwiZXhwIjoxNjE0MjU3NDEyfQ.icA_XykwUVuaMIz5KfuASpqmTCdb4hFEWwlnFflCu8M'
 
 
   getRoles() {
@@ -47,7 +47,7 @@ export class RolesService {
 
   updateRole(roleData: any){
     this.getRoles();
-    
+
     const url = 'http://devourin-api-qa.chain-expert.com/role/updaterole'
    
     var reqHeader = new HttpHeaders({

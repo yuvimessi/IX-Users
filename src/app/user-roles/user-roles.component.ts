@@ -25,7 +25,6 @@ export class UserRolesComponent implements OnInit {
   }
 
 
-
   loadData() {
     this.user_roles.getRoles().subscribe((result: any) => {
       console.log(result['data'])

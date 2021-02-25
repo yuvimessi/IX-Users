@@ -10,11 +10,14 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RoleSearchPipe } from './role-search.pipe';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-// import { Ng2OrderModule } from 'ng2-order-pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateRoleComponent } from './create-role/create-role.component';
 import { EditRoleComponent } from './edit-role/edit-role.component';
+import { ApexReportComponent } from './apex-report/apex-report.component';
+import { NgApexchartsModule, ApexChart } from 'ng-apexcharts';
+
+
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { EditRoleComponent } from './edit-role/edit-role.component';
     HomeComponent,
     RoleSearchPipe,
     CreateRoleComponent,
-    EditRoleComponent
+    EditRoleComponent,
+    ApexReportComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,7 @@ import { EditRoleComponent } from './edit-role/edit-role.component';
     FormsModule,
     ReactiveFormsModule,
     Ng2SearchPipeModule,
-    // Ng2OrderModule,
+    NgApexchartsModule
   ],
   providers: [NgbActiveModal],
   bootstrap: [AppComponent]

@@ -37,10 +37,14 @@
       totalItems: totalRecords }">
 
         <td>{{user.name}}</td>
-        <td><a [routerLink]="['/edit-role', user.name, user.id]"><img width="25px" style="margin-bottom:3px; margin-right:5px" alt="Edit Role"
+
+        <td *ngIf="user.active==true"><a [routerLink]="['/edit-role', user.name, user.id]"><img width="25px" style="margin-bottom:3px; margin-right:5px" alt="Edit Role"
             src="assets/images/edit.png" /></a>
         </td>
-        <td><button type="button" class="btn btn-danger" (click)="deactivateRole(user.id)">Activate/Deactivate</button></td>
+        <td *ngIf="user.active==false"><b>-</b></td>
+        
+        <td *ngIf="user.active==true"><button type="button" class="btn btn-danger" (click)="deactivateRole(user.id)">Deactivate</button></td>
+        <td *ngIf="user.active==false"><button type="button" class="btn btn-danger" (click)="deactivateRole(user.id)">Activate</button></td>
 
       </tr>
     </tbody>

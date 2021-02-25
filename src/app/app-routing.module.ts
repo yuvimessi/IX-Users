@@ -4,12 +4,16 @@ import { UserRolesComponent } from './user-roles/user-roles.component';
 import { HomeComponent } from './home/home.component';
 import { CreateRoleComponent } from './create-role/create-role.component';
 import { EditRoleComponent } from './edit-role/edit-role.component';
+import { ApexReportComponent } from './apex-report/apex-report.component';
+
+
 const routes: Routes = [
   //{path: "**", redirectTo: "/home"},
   {path: "home", component: HomeComponent},
   {path: "user-roles", component: UserRolesComponent},
   {path:"create-role", component: CreateRoleComponent},
-  {path:"edit-role/:name/:id", component: EditRoleComponent}
+  {path:"edit-role/:name/:id", component: EditRoleComponent},
+  {path:"apex-chart", component: ApexReportComponent}
 ];
 
 @NgModule({

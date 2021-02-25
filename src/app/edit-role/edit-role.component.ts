@@ -33,7 +33,7 @@ export class EditRoleComponent implements OnInit {
   }
 
   updateRoleName(id: any) {
-    console.log(id)
+    //console.log(id)
     let roleData;
 
     this.userName = (<HTMLSelectElement>document.getElementById('rname')).value;
