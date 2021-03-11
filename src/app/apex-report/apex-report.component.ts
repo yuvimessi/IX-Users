@@ -20,7 +20,9 @@ export class ApexReportComponent implements OnInit {
 
   @ViewChild("chart") chart: ChartComponent;
 
-  public chartOptions: Partial<ChartOptions>;
+  public chartOptions: any;
+
+  //public chartOptions: Partial<ChartOptions>;
 
   
   ngOnInit(): void {
